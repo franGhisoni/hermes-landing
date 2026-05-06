@@ -22,10 +22,16 @@ export function Header() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 flex items-center justify-between h-16 md:h-20">
         <a
           href="#"
-          className="font-serif text-xl text-carbon tracking-tight hover:text-terracotta transition-colors duration-300"
+          className="flex items-center gap-3 font-serif text-xl text-carbon tracking-tight hover:text-terracotta transition-colors duration-300"
           aria-label="Hermes — Inicio"
         >
-          Hermes
+          <img
+            src="/logo.png"
+            alt=""
+            className="h-8 md:h-9 w-auto"
+            aria-hidden="true"
+          />
+          <span>Hermes</span>
         </a>
         <nav aria-label="Navegación principal" className="flex items-center gap-8">
           <a
@@ -39,6 +45,12 @@ export function Header() {
             className="hidden sm:block text-sm text-muted hover:text-carbon transition-colors duration-300 tracking-wide"
           >
             Proceso
+          </a>
+          <a
+            href="#producto"
+            className="hidden md:block text-sm text-muted hover:text-carbon transition-colors duration-300 tracking-wide"
+          >
+            Producto
           </a>
           <a
             href="#contacto"
