@@ -11,18 +11,13 @@ export function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 8)
 
-      const darkSections = document.querySelectorAll('.bg-carbon, #inteligencia, #contacto, footer')
-      const navThreshold = 55
-      let overDark = false
-
-      darkSections.forEach((section) => {
+      const section = document.getElementById('inteligencia')
+      if (section) {
         const rect = section.getBoundingClientRect()
-        if (rect.top <= navThreshold && rect.bottom >= 20) {
-          overDark = true
-        }
-      })
-
-      setIsOverDark(overDark)
+        setIsOverDark(rect.top <= 55 && rect.bottom >= 20)
+      } else {
+        setIsOverDark(false)
+      }
     }
 
     handleScroll()
