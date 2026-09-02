@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import './Header.css'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -47,6 +48,7 @@ export function Header() {
             <span>Hermes</span>
           </a>
           <nav aria-label="Navegación principal" className="flex items-center gap-7">
+            <LanguageSwitcher dark={isOverDark} />
             <a
               href="#casos"
               className={`hidden sm:block text-sm transition-colors duration-300 tracking-wide ${
